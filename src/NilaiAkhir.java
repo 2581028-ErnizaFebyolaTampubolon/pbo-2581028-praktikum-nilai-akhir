@@ -29,8 +29,23 @@ public class NilaiAkhir {
         double akhir = praktikum * BOBOT_PRAKTIKUM
                 + tugas * BOBOT_TUGAS
                 + mid * BOBOT_MID;
+        // Augmented assignment
+        akhir += nilaiFinal * BOBOT_FINAL;
+
+        // Casting dengan cara memotong angka desimal
+        int hasilCasting = (int) akhir;
+
+        // Pembulatan menggunakan Math.round()
+        long hasilPembulatan = Math.round(akhir);
+
+        // Selisih hasil casting dan pembulatan
+        long selisih = hasilPembulatan - hasilCasting;
+
+        // Boolean untuk menentukan status kelulusan
+        boolean lulus = akhir >= 60;
 
         System.out.println("Nilai Akhir :  "+akhir);
+
         input.close();
     }
 }
