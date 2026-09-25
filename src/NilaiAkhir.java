@@ -44,7 +44,13 @@ public class NilaiAkhir {
         // Boolean untuk menentukan status kelulusan
         boolean lulus = akhir >= 60;
 
-        System.out.println("Nilai Akhir :  "+akhir);
+
+        System.out.println("\n===== HASIL NILAI =====");
+        System.out.println("Nilai akhir       : " + akhir);
+        System.out.println("(int) akhir       : " + hasilCasting);
+        System.out.println("Math.round(akhir) : " + hasilPembulatan);
+        System.out.println("Selisih            : " + selisih);
+        System.out.println("Lulus              : " + lulus);
 
         input.close();
     }
