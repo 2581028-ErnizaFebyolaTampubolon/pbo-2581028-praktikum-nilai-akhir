@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class NilaiAkhir {
 
+    // Konstanta bobot nilai
     static final double BOBOT_PRAKTIKUM = 0.30;
     static final double BOBOT_TUGAS = 0.20;
     static final double BOBOT_MID = 0.20;
@@ -11,27 +12,25 @@ public class NilaiAkhir {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Nilai praktikum : ");
+        // Input nilai
+        System.out.print("Masukkan nilai Praktikum : ");
         double praktikum = input.nextDouble();
 
-        System.out.print("Nilai tugas : ");
+        System.out.print("Masukkan nilai Tugas     : ");
         double tugas = input.nextDouble();
 
-        System.out.print("Nilai MID : ");
+        System.out.print("Masukkan nilai MID       : ");
         double mid = input.nextDouble();
 
-        System.out.print("Nilai final : ");
+        System.out.print("Masukkan nilai Final     : ");
         double nilaiFinal = input.nextDouble();
 
+        // Menghitung nilai akhir dalam satu ekspresi
         double akhir = praktikum * BOBOT_PRAKTIKUM
                 + tugas * BOBOT_TUGAS
-                + mid * BOBOT_MID
-                + nilaiFinal * BOBOT_FINAL;
+                + mid * BOBOT_MID;
 
-        akhir += 0;
-
-        System.out.println("Nilai akhir : " + akhir);
-
+        System.out.println("Nilai Akhir :  "+akhir);
         input.close();
     }
 }
