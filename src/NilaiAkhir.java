@@ -23,6 +23,15 @@ public class NilaiAkhir {
         System.out.print("Nilai final : ");
         double nilaiFinal = input.nextDouble();
 
+        double akhir = praktikum * BOBOT_PRAKTIKUM
+                + tugas * BOBOT_TUGAS
+                + mid * BOBOT_MID
+                + nilaiFinal * BOBOT_FINAL;
+
+        akhir += 0;
+
+        System.out.println("Nilai akhir : " + akhir);
+
         input.close();
     }
 }
